@@ -1,21 +1,25 @@
 import React from 'react';
-import ReminderItem from './ReminderItem';
 
-const ReminderList = ({ reminders, deleteReminder, snoozeReminder }) => {
+const ReminderList = ({ reminders, deleteReminder, snoozeReminder, startEditing }) => {
   return (
-    <div>
-      <h2>Reminders</h2>
-      <ul>
-        {reminders.map((reminder, index) => (
-          <ReminderItem 
-            key={index} 
-            reminder={reminder} 
-            deleteReminder={() => deleteReminder(index)} 
-            snoozeReminder={() => snoozeReminder(index)}
-          />
-        ))}
-      </ul>
-    </div>
+    <ul>
+      {reminders.map((reminder, index) => (
+        <li key={index}>
+          <div className="reminder-text">{reminder.text}</div>
+          <div className="reminder-buttons">
+            <button className="snooze-button" onClick={() => snoozeReminder(index)}>
+              Snooze
+            </button>
+            <button className="delete-button" onClick={() => deleteReminder(index)}>
+              Delete
+            </button>
+            <button className="edit-button" onClick={() => startEditing(index)}>
+              Edit
+            </button>
+          </div>
+        </li>
+      ))}
+    </ul>
   );
 };
 

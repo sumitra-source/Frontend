@@ -1,0 +1,257 @@
+.app-container {
+  display: flex;
+  background-color: #d9cad2;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.sidebar-header {
+  margin-bottom: 20px;
+}
+
+.sidebar-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.sidebar-nav {
+  flex: 1;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  background-color: #34495e;
+  transform: scale(1.05);
+}
+
+.logout-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e74c3c;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 1rem;
+  position: relative;
+  top: -30px; /* Adjust this value to move the button upward */
+}
+
+.logout-button:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+.main-content {
+  margin-left: 50px;
+  padding: 40px;
+  width: calc(100% - 250px);
+  transition: margin-left 0.3s;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.header-subtitle {
+  font-size: 2.2rem;
+  color: #2e3838;
+}
+
+.profile-button {
+  width: 100px; /* Set a fixed width */
+  height: 100px; /* Set a fixed height */
+  border: none;
+  border-radius: 50%; /* Makes it round */
+  background-color: #2c3e50; /* Beautiful golden-orange color */
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 1.5rem; /* Slightly bigger font size for the icon */
+}
+
+.profile-button:hover {
+  background-color: #bc9c80; /* A more intense orange color when hovering */
+  transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+/* Add any icon inside the button if using a font-awesome or other icon library */
+.profile-button i {
+  font-size: 3.5rem; /* Adjust the icon size */
+}
+
+
+.categories-section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.categories {
+  display: flex;
+  gap: 20px;
+}
+
+.category-card {
+  padding: 20px;
+  background-color: #ecf0f1;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2c3e50;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+}
+
+.tasks-section {
+  margin-bottom: 20px;
+}
+
+.task-item {
+  padding: 15px;
+  background-color: #ecf0f1;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  transition: transform 0.3s;
+}
+
+.task-item:hover {
+  transform: scale(1.02);
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.complete-button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.complete-button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.edit-button {
+  background-color: #ffc107;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.edit-button:hover {
+  background-color: #e0a800;
+  transform: scale(1.05);
+}
+
+.add-task-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.add-task-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.add-task-input:focus {
+  border-color: #475158;
+  outline: none;
+}
+
+.add-task-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2c3e50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 1rem;
+}
+
+.add-task-button:hover {
+  background-color: #2c3e50;
+  transform: scale(1.05);
+}
+
+.quote-section {
+  margin-top: 10px;
+  padding: 5px;
+  background-color: #ecf0f1;
+  border-radius: 6px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.quote {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #2c3e50;
+  text-align: center;
+}
